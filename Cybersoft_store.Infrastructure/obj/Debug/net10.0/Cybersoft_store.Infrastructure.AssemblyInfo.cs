@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cybersoft_store.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+274158a4cd8bcb4d3ff45e9e42cc9bbcce6a9602")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cybersoft_store.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cybersoft_store.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

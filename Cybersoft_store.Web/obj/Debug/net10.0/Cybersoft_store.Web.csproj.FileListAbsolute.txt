@@ -173,3 +173,6 @@ C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\n
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\net10.0\Cybersoft_store.Application.pdb
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\net10.0\Cybersoft_store.Helper.pdb
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\net10.0\Cybersoft_store.Infrastructure.pdb
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\obj\Debug\net10.0\Cybersoft_store.Web.sourcelink.json
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\net10.0\Blazor.LocalStorage.dll
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Web\bin\Debug\net10.0\Blazor.Serialization.dll

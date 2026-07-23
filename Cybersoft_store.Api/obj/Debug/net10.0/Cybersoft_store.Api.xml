@@ -37,7 +37,7 @@
             <param name="dto">JSON để tạo loại sản phẩm</param>
             <returns>Thông báo việc tạo mới loại sản phẩm</returns>
         </member>
-        <member name="M:Cybersoft_store.Api.Controllers.UserController.Register(UeRegisterDto)">
+        <member name="M:Cybersoft_store.Api.Controllers.UserController.Register(UserRegisterDto)">
             <summary>
             Đăng ký người dùng mới
             </summary>

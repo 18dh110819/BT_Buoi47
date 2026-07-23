@@ -47,6 +47,35 @@
           "lib/net10.0/BCrypt-Net-Next.dll": {}
         }
       },
+      "Blazor.LocalStorage/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Blazor.Serialization": "10.0.0"
+        },
+        "compile": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Blazor.Serialization/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1257,6 +1286,46 @@
         "lib/netstandard2.1/BCrypt-Net-Next.dll",
         "lib/netstandard2.1/BCrypt.Net-Next.xml",
         "readme.md"
+      ]
+    },
+    "Blazor.LocalStorage/10.0.0": {
+      "sha512": "UTrYo3qL5dlPUEnW5CXeSW8GKWG2S7O8bZ8sm/zhiSP/EwxqdHQgd/4z/lEdDfwhJt64zSyWYKMyc5gRuViyUg==",
+      "type": "package",
+      "path": "blazor.localstorage/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "blazor.localstorage.10.0.0.nupkg.sha512",
+        "blazor.localstorage.nuspec",
+        "lib/net10.0/Blazor.LocalStorage.dll",
+        "lib/net10.0/Blazor.LocalStorage.xml",
+        "lib/net8.0/Blazor.LocalStorage.dll",
+        "lib/net8.0/Blazor.LocalStorage.xml",
+        "lib/net9.0/Blazor.LocalStorage.dll",
+        "lib/net9.0/Blazor.LocalStorage.xml",
+        "logo.png"
+      ]
+    },
+    "Blazor.Serialization/10.0.0": {
+      "sha512": "ltd7HElawdM5AZ6Kar/Ht2lY9nNi+8q8pwkP0BoJl0J1O6FuDOmPAWSPJ3NV8sz0OotkTUuTAHqd4oqZZzCCcA==",
+      "type": "package",
+      "path": "blazor.serialization/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "blazor.serialization.10.0.0.nupkg.sha512",
+        "blazor.serialization.nuspec",
+        "lib/net10.0/Blazor.Serialization.dll",
+        "lib/net10.0/Blazor.Serialization.xml",
+        "lib/net8.0/Blazor.Serialization.dll",
+        "lib/net8.0/Blazor.Serialization.xml",
+        "lib/net9.0/Blazor.Serialization.dll",
+        "lib/net9.0/Blazor.Serialization.xml",
+        "logo.png"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3415,6 +3484,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Blazor.LocalStorage >= 10.0.0",
       "Cybersoft_store.Application >= 1.0.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.1",
       "Microsoft.AspNetCore.Components.Authorization >= 10.0.7",
@@ -3473,6 +3543,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Blazor.LocalStorage": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",

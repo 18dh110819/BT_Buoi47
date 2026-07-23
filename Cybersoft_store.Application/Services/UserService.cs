@@ -4,22 +4,25 @@ using Cybersoft_store.Infrastructure.Models;
 
 public interface IUserService
 {
-    Task<ResponseType<string>> Register(UeRegisterDto registerDto);
-    // Task Login(LoginDto loginDto);
+    Task<ResponseType<string>> Register(UserRegisterDto registerDto);
+    Task<ResponseType<string>> Login(LoginDto loginDto);
+    Task<ResponseType<ProfileDto>> GetProfile(string token);
 }
 
 public class UserService : IUserService
 {
     private readonly IUserRepository _userRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly JwtAuthService _jwtService;
 
-    public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
+    public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork, JwtAuthService jwtService)
     {
         _userRepository = userRepository;
         _unitOfWork = unitOfWork;
+        _jwtService = jwtService;
     }
 
-    public async Task<ResponseType<string>> Register(UeRegisterDto registerDto)
+    public async Task<ResponseType<string>> Register(UserRegisterDto registerDto)
     {
         try
         {
@@ -91,7 +94,7 @@ public class UserService : IUserService
                     Timestamp = DateTime.Now
                 };
             }
-            
+
             await _userRepository.AddAsync(newUser);
             await _unitOfWork.SaveChangesAsync();
             return new ResponseType<string>
@@ -116,15 +119,53 @@ public class UserService : IUserService
         }
     }
 
-    // public async Task Login(LoginDto loginDto)
-    // {
-    //     // Kiểm tra thông tin đăng nhập
-    //     var user = await _userRepository.GetWhereAsync(u => u.Username == loginDto.UserNameOrEmailOrPhone);
-    //     if (user == null) // Lưu ý: bạn nên so sánh mật khẩu đã mã hóa
-    //     {
-    //         throw new Exception("Thông tin đăng nhập không hợp lệ.");
-    //     }
+    public async Task<ResponseType<string>> Login(LoginDto loginDto)
+    {
+        // Kiểm tra thông tin đăng nhập
+        var token = _jwtService.GenerateToken(loginDto);
+        if (string.IsNullOrEmpty(token)) // Lưu ý: bạn nên so sánh mật khẩu đã mã hóa
+        {
+            return new ResponseType<string>
+            {
+                StatusCode = (int)HttpStatusCode.Unauthorized,
+                DataResponse = string.Empty,
+                Message = UserResponseMessage.UserNotValid,
+                Timestamp = DateTime.UtcNow
+            };
+        }
 
-    //     // Thực hiện các bước xác thực và tạo token JWT nếu cần thiết
-    // }
+        return new ResponseType<string>
+        {
+            StatusCode = (int)HttpStatusCode.Accepted,
+            DataResponse = token,
+            Message = UserResponseMessage.UserLoginSuccess,
+            Timestamp = DateTime.UtcNow
+        };
+
+        // Thực hiện các bước xác thực và tạo token JWT nếu cần thiết
+    }
+
+    public async Task<ResponseType<ProfileDto>> GetProfile(string token)
+    {
+        var userId = _jwtService.DecodePayloadToken(token);
+        var user = await _userRepository.GetFirstOrDefaultAsync(x => x.Id.ToString() == userId);
+
+        return new ResponseType<ProfileDto>
+        {
+            StatusCode = 200,
+            DataResponse = new ProfileDto
+            {
+                Id = user.Id,
+                Username = user.Username,
+                FullName = user.FullName,
+                Alias = user.Alias,
+                Email = user.Email,
+                Phone = user.Phone,
+                Avatar = user.Avatar
+            },
+            Message = "",
+            Timestamp = DateTime.UtcNow
+        };
+
+    }
 }

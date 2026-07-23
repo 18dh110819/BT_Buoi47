@@ -77,11 +77,12 @@ builder.Services.AddAuthentication("Bearer").AddJwtBearer(options =>
 });
 
 //DI jwt service
-// builder.Services.AddScoped<JwtAuthService>();
+builder.Services.AddScoped<JwtAuthService>();
 
 builder.Services.AddDbContext<CybersoftMarketPlaceContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnectionString"));
+    options.UseLazyLoadingProxies()
+        .UseSqlServer(builder.Configuration.GetConnectionString("DBConnectionString"));
 });
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -109,7 +110,6 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-
 //Cors for http://localhost:5018
 builder.Services.AddCors(options =>
 {
@@ -135,7 +135,7 @@ app.UseSwagger();
 app.UseSwaggerUI(options =>
 {
     options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API v1");
-    options.RoutePrefix = "swagger";
+    options.RoutePrefix = string.Empty;
 });
 
 app.UseAuthentication(); //Xác thực (đăng nhập)

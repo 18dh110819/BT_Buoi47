@@ -5,6 +5,8 @@ public class UserResponseMessage
     public const string UsernameAlreadyExists = "Username thoại đã tồn tại.";
     public const string EmailAlreadyExists = "Email đã tồn tại.";
     public const string PhoneAlreadyExists = "Số điện thoại đã tồn tại.";
+    public const string UserNotValid = "Username/password không đúng";
+    public const string UserLoginSuccess = "Đăng nhập thành công";
 }
 
 public class CategoryResponseMessage

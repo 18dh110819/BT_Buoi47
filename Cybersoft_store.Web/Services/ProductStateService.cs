@@ -1,18 +1,17 @@
 public class ProductStateService
 {
     private readonly HttpClient _httpClient;
-    public List<ProductDto> Products { get; set; } = [];
+    public List<ProductDto> Products { get; set; } = new List<ProductDto>();
 
-    public ProductStateService(HttpClient httpClient)
+    public ProductStateService(IHttpClientFactory httpClientFactory)
     {
-        _httpClient = httpClient;
+        _httpClient = httpClientFactory.CreateClient("CybersoftShopee");
     }
 
     public async Task LoadProductsAsync()
     {
-        var response = await _httpClient.GetFromJsonAsync<ResponseType<List<ProductDto>>>("http://localhost:5098/api/product/all") ?? new ResponseType<List<ProductDto>>();
-        Products = response.DataResponse ?? [];
-        StateHasChanged();
+        var response = await _httpClient.GetFromJsonAsync<ResponseType<List<ProductDto>>>("api/product/all") ?? new ResponseType<List<ProductDto>>();
+        Products = response.DataResponse ?? new List<ProductDto>();
     }
 
     public Action? OnChange { get; set; }

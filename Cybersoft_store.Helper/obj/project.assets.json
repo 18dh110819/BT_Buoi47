@@ -52,11 +52,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\Cybersoft_store.Helper.csproj",
+      "projectUniqueName": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\Cybersoft_store.Helper.csproj",
       "projectName": "Cybersoft_store.Helper",
-      "projectPath": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\Cybersoft_store.Helper.csproj",
+      "projectPath": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\Cybersoft_store.Helper.csproj",
       "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\obj\\",
+      "outputPath": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Helper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

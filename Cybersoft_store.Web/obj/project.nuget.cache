@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "40zID+o63iM=",
+  "dgSpecHash": "wUbU1DYkpgA=",
   "success": true,
   "projectFilePath": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Web\\Cybersoft_store.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nguye\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
+    "C:\\Users\\nguye\\.nuget\\packages\\blazor.localstorage\\10.0.0\\blazor.localstorage.10.0.0.nupkg.sha512",
+    "C:\\Users\\nguye\\.nuget\\packages\\blazor.serialization\\10.0.0\\blazor.serialization.10.0.0.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.1\\microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
     "C:\\Users\\nguye\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\10.0.7\\microsoft.aspnetcore.components.authorization.10.0.7.nupkg.sha512",

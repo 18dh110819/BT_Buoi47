@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-public class UeRegisterDto
+public class UserRegisterDto
 {
     [Required(ErrorMessage = "Username là bắt buộc.")]
     [StringLength(32, MinimumLength = 6, ErrorMessage = "Username phải có độ dài từ 6 đến 32 ký tự.")]

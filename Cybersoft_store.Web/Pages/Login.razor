@@ -1,0 +1,92 @@
+@page "/login"
+@layout HomeMasterPage
+@inject UserStateService _service
+@inject HttpClient _client
+@implements IDisposable
+@inject NavigationManager _navigationManager
+
+
+@* ===================== FORM ĐĂNG NHẬP ===================== *@
+<div class="row justify-content-center py-4">
+    <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+
+                <h4 class="card-title text-center mb-4">Đăng nhập</h4>
+
+                <EditForm Model="@login" OnValidSubmit="LoginHandle">
+                    <ValidationSummary />
+                    @* Tên đăng nhập *@
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Tên đăng nhập</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="fas fa-user text-secondary"></i>
+                            </span>
+                            <input type="text" class="form-control" id="username" @bind="login.UserNameOrEmailOrPhone"
+                                   placeholder="Email / Số điện thoại / Tên đăng nhập" />
+                        </div>
+                    </div>
+
+                    @* Mật khẩu *@
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-white">
+                                <i class="fas fa-lock text-secondary"></i>
+                            </span>
+                            <input type="password" class="form-control" id="password" @bind="login.Password"
+                                   placeholder="Nhập mật khẩu" />
+                        </div>
+                    </div>
+
+                    @* Ghi nhớ + quên mật khẩu *@
+                    <div class="d-flex justify-content-between align-items-center mb-3 small">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="remember" />
+                            <label class="form-check-label" for="remember">Ghi nhớ đăng nhập</label>
+                        </div>
+                        <a href="#" class="text-danger text-decoration-none">Quên mật khẩu?</a>
+                    </div>
+
+                    @* Nút đăng nhập *@
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-danger">ĐĂNG NHẬP</button>
+                    </div>
+
+                </EditForm>
+
+                <hr class="my-3" />
+
+                <p class="text-center small text-secondary mb-0">
+                    Bạn mới biết đến Shopee?
+                    <a href="#" class="text-danger text-decoration-none fw-semibold">Đăng ký</a>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code{
+    private LoginDto login = new LoginDto();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Nếu có dùng state service:
+        _service.OnChange += StateHasChanged;
+    }
+
+    public async Task LoginHandle(){
+        await _service.Login(login);
+        _navigationManager.NavigateTo("/");
+    }
+
+    public void Dispose()
+    {
+        // Cleanup nếu cần
+        _service.OnChange -= StateHasChanged;
+    }
+}

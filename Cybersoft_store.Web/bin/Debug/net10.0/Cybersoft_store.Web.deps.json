@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "Cybersoft_store.Web/1.0.0": {
         "dependencies": {
+          "Blazor.LocalStorage": "10.0.0",
           "Cybersoft_store.Application": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.1",
           "Microsoft.AspNetCore.SignalR.Client": "10.0.7"
@@ -47,6 +48,25 @@
           "lib/net10.0/BCrypt-Net-Next.dll": {
             "assemblyVersion": "4.2.0.0",
             "fileVersion": "4.2.0.0"
+          }
+        }
+      },
+      "Blazor.LocalStorage/10.0.0": {
+        "dependencies": {
+          "Blazor.Serialization": "10.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/Blazor.LocalStorage.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
+          }
+        }
+      },
+      "Blazor.Serialization/10.0.0": {
+        "runtime": {
+          "lib/net10.0/Blazor.Serialization.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.0.0"
           }
         }
       },
@@ -866,6 +886,20 @@
       "sha512": "sha512-gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
       "path": "bcrypt.net-next/4.2.0",
       "hashPath": "bcrypt.net-next.4.2.0.nupkg.sha512"
+    },
+    "Blazor.LocalStorage/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UTrYo3qL5dlPUEnW5CXeSW8GKWG2S7O8bZ8sm/zhiSP/EwxqdHQgd/4z/lEdDfwhJt64zSyWYKMyc5gRuViyUg==",
+      "path": "blazor.localstorage/10.0.0",
+      "hashPath": "blazor.localstorage.10.0.0.nupkg.sha512"
+    },
+    "Blazor.Serialization/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ltd7HElawdM5AZ6Kar/Ht2lY9nNi+8q8pwkP0BoJl0J1O6FuDOmPAWSPJ3NV8sz0OotkTUuTAHqd4oqZZzCCcA==",
+      "path": "blazor.serialization/10.0.0",
+      "hashPath": "blazor.serialization.10.0.0.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

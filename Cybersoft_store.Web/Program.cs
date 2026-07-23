@@ -2,14 +2,16 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+builder.Services.AddLocalStorageServices();
 
-//DI HttpClient
-builder.Services.AddHttpClient("CybersoftMarketPlace.Web.ServerAPI", client =>
+// DI HttpClient (name aligned with services)
+builder.Services.AddHttpClient("CybersoftShopee", client =>
 {
-    client.BaseAddress = new Uri("http://localhost:5018");
+    client.BaseAddress = new Uri("http://localhost:5098");
 });
 
 builder.Services.AddScoped<ProductStateService>();
+builder.Services.AddScoped<UserStateService>();
 
 var app = builder.Build();
 

@@ -29,10 +29,17 @@ namespace Cybersoft_store.Api.Controllers
 		/// <param name="registerDto">Các thông tin cần thiết cho đăng ký bên phía user web(Không phải admin)</param>
 		/// <returns></returns>
 		[HttpPost("register")]
-		public async Task<IActionResult> Register([FromBody] UeRegisterDto registerDto)
+		public async Task<IActionResult> Register([FromBody] UserRegisterDto registerDto)
 		{
 			var response = await _userService.Register(registerDto);
 			return StatusCode(response.StatusCode, response);
+		}
+
+		[HttpPost("login")]
+		public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
+		{
+			var res = await _userService.Login(loginDto);
+			return StatusCode(res.StatusCode, res);
 		}
 	}
 }

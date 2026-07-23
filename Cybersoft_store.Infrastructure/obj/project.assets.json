@@ -3676,11 +3676,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\Cybersoft_store.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\Cybersoft_store.Infrastructure.csproj",
       "projectName": "Cybersoft_store.Infrastructure",
-      "projectPath": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\Cybersoft_store.Infrastructure.csproj",
+      "projectPath": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\Cybersoft_store.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\nguye\\Desktop\\cybersoft\\Cybersoft_store\\Cybersoft_store.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

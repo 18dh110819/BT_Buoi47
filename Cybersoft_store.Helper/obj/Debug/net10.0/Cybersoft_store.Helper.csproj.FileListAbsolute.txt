@@ -10,3 +10,4 @@ C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Helper\obj\Debu
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Helper\obj\Debug\net10.0\refint\Cybersoft_store.Helper.dll
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Helper\obj\Debug\net10.0\Cybersoft_store.Helper.pdb
 C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Helper\obj\Debug\net10.0\ref\Cybersoft_store.Helper.dll
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Helper\obj\Debug\net10.0\Cybersoft_store.Helper.sourcelink.json

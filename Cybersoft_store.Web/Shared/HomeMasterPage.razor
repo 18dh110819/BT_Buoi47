@@ -1,4 +1,7 @@
 @inherits LayoutComponentBase
+@inject UserStateService _service
+@inject ILocalStorageService _localStorageService
+@implements IDisposable
 
 @* ===================== HEADER ===================== *@
 <header class="bg-danger text-white">
@@ -32,9 +35,18 @@
                         <li><a class="dropdown-item" href="#">English</a></li>
                     </ul>
                 </div>
-                <a href="#" class="text-white text-decoration-none">
-                    <i class="fas fa-user-circle me-1"></i>kaitokido14120
-                </a>
+                @if (string.IsNullOrEmpty(_service.accessToken))
+                {
+                    <a href="login" class="text-white text-decoration-none">
+                        <span>Đăng nhập</span>
+                    </a>
+                }
+                else
+                {
+                    <a href="#" class="text-white text-decoration-none">
+                        <span><i class="fas fa-user-circle me-1"></i>@_service.CurrentUser.Email</span>
+                    </a>
+                }
             </div>
         </div>
 
@@ -48,8 +60,7 @@
 
             <form class="flex-grow-1">
                 <div class="bg-white rounded p-1 d-flex">
-                    <input type="text" class="form-control border-0 shadow-none"
-                           placeholder="Tìm trong Shopee Mall" />
+                    <input type="text" class="form-control border-0 shadow-none" placeholder="Tìm trong Shopee Mall" />
                     <button type="submit" class="btn btn-danger px-4">
                         <i class="fas fa-search"></i>
                     </button>
@@ -58,7 +69,8 @@
 
             <a href="#" class="text-white position-relative me-2">
                 <i class="fas fa-shopping-cart fa-2x"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-danger">
+                <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-white text-danger">
                     15
                 </span>
             </a>
@@ -165,10 +177,32 @@
 
     <div class="border-top">
         <div class="container py-3">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary gap-2">
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center small text-secondary gap-2">
                 <span>© 2026 Shopee. Tất cả các quyền được bảo lưu.</span>
-                <span>Quốc gia &amp; Khu vực: Singapore | Indonesia | Thái Lan | Malaysia | Việt Nam | Philippines</span>
+                <span>Quốc gia &amp; Khu vực: Singapore | Indonesia | Thái Lan | Malaysia | Việt Nam |
+                    Philippines</span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        // Gọi API ở đây nếu cần
+        // var data = await Http.GetFromJsonAsync<T>("/api/endpoint");
+
+        // Nếu có dùng state service:
+        _service.OnChange += StateHasChanged;
+
+        await _service.GetProfile();
+
+    }
+
+    public void Dispose()
+    {
+        // Cleanup nếu cần
+        _service.OnChange -= StateHasChanged;
+    }
+}

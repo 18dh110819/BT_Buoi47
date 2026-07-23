@@ -42,8 +42,8 @@
         // var data = await Http.GetFromJsonAsync<T>("/api/endpoint");
         await _productStateService.LoadProductsAsync(); // Giả sử bạn có phương thức này để load dữ liệu
 
-        // Nếu có dùng state service:
-        _productStateService.OnChange += _productStateService.StateHasChanged;
+        // Nếu có dùng state service: subscribe the component's StateHasChanged
+        _productStateService.OnChange += StateHasChanged;
     }
 
     public void Dispose()
