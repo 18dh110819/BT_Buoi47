@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cybersoft_store.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Cybersoft_store.Api.Controllers.CategoryController.GetAllCategory(System.String,System.Int32,System.Int32)">
+            <summary>
+            Lấy tất cả loại sản phẩm theo input người dùng
+            </summary>
+            <param name="keyword">Tìm kiếm theo input người dùng</param>
+            <param name="page">Số trang hiện tại</param>
+            <param name="pageSize">Số lượng hiển thị</param>
+            <response code="200">Thành công lấy được dữ liệu.</response>
+            <response code="400">Không lấy được dữ liệu. Lỗi từ hệ thống</response>
+            <returns>Danh sách Loại sản phẩm</returns> <summary>
+            
+            </summary>
+            <param name="keyword">Tìm kiếm theo input người dùng</param>
+            <param name="page">Số trang hiện tại</param>
+            <param name="pageSize">Số lượng hiển thị</param>
+            <response code="200">Thành công lấy được dữ liệu.</response>
+            <response code="400">Không lấy được dữ liệu. Lỗi từ hệ thống</response>
+            <returns>Danh sách Loại sản phẩm</returns>
+        </member>
+        <member name="M:Cybersoft_store.Api.Controllers.CategoryController.GetAllCategory(CategoryCreateDTO)">
+            <summary>
+            Tạo mới loại sản phẩm cho cửa hàng
+            </summary>
+            <param name="dto">JSON để tạo loại sản phẩm</param>
+            <returns>Thông báo việc tạo mới loại sản phẩm</returns> <summary>
+            
+            <response code="201">Đã thêm loại sản phẩm trong cửa hàng.</response>
+            <response code="409">Đã tồn tại loại sản phẩm trong cửa hàng</response>
+            <response code="400">Đã xảy ra lỗi khi đang thêm loại sản phẩm vào cửa hàng</response>
+            </summary>
+            <param name="dto">JSON để tạo loại sản phẩm</param>
+            <returns>Thông báo việc tạo mới loại sản phẩm</returns>
+        </member>
+        <member name="M:Cybersoft_store.Api.Controllers.UserController.Register(UeRegisterDto)">
+            <summary>
+            Đăng ký người dùng mới
+            </summary>
+            <param name="registerDto">Các thông tin cần thiết cho đăng ký bên phía user web(Không phải admin)</param>
+            <returns></returns> <summary>
+            
+            </summary>
+            <param name="registerDto">Các thông tin cần thiết cho đăng ký bên phía user web(Không phải admin)</param>
+            <returns></returns>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type)">
+            <summary>
+            Generates a documentation comment ID for a type.
+            Example: T:Namespace.Outer+Inner`1 becomes T:Namespace.Outer.Inner`1
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.PropertyInfo)">
+            <summary>
+            Generates a documentation comment ID for a property.
+            Example: P:Namespace.ContainingType.PropertyName or for an indexer P:Namespace.ContainingType.Item(System.Int32)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Type,System.String)">
+            <summary>
+            Generates a documentation comment ID for a property given its container type and property name.
+            Example: P:Namespace.ContainingType.PropertyName
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.CreateDocumentationId(System.Reflection.MethodInfo)">
+            <summary>
+            Generates a documentation comment ID for a method (or constructor).
+            For example:
+              M:Namespace.ContainingType.MethodName(ParamType1,ParamType2)~ReturnType
+              M:Namespace.ContainingType.#ctor(ParamType)
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.GetTypeDocId(System.Type,System.Boolean,System.Boolean)">
+            <summary>
+            Generates a documentation ID string for a type.
+            This method handles nested types (replacing '+' with '.'),
+            generic types, arrays, pointers, by-ref types, and generic parameters.
+            The <paramref name="includeGenericArguments"/> flag controls whether
+            constructed generic type arguments are emitted, while <paramref name="omitGenericArity"/>
+            controls whether the generic arity marker (e.g. "`1") is appended.
+            </summary>
+        </member>
+        <member name="M:Microsoft.AspNetCore.OpenApi.Generated.DocumentationCommentIdHelper.NormalizeDocId(System.String)">
+            <summary>
+            Normalizes a documentation comment ID to match the compiler-style format.
+            Strips the return type suffix for ordinary methods but retains it for conversion operators.
+            </summary>
+            <param name="docId">The documentation comment ID to normalize.</param>
+            <returns>The normalized documentation comment ID.</returns>
+        </member>
+    </members>
+</doc>

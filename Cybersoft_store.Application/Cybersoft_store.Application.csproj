@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cybersoft_store.Helper\Cybersoft_store.Helper.csproj" />
+    <ProjectReference Include="..\Cybersoft_store.Infrastructure\Cybersoft_store.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

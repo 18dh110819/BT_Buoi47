@@ -1,0 +1,14 @@
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\bin\Debug\net10.0\Cybersoft_store.Infrastructure.deps.json
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\bin\Debug\net10.0\Cybersoft_store.Infrastructure.runtimeconfig.json
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\bin\Debug\net10.0\Cybersoft_store.Infrastructure.dll
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\bin\Debug\net10.0\Cybersoft_store.Infrastructure.pdb
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.AssemblyInfo.cs
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.dll
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\refint\Cybersoft_store.Infrastructure.dll
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.pdb
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\Cybersoft_store.Infrastructure.genruntimeconfig.cache
+C:\Users\nguye\Desktop\cybersoft\Cybersoft_store\Cybersoft_store.Infrastructure\obj\Debug\net10.0\ref\Cybersoft_store.Infrastructure.dll

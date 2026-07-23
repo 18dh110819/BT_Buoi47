@@ -1,0 +1,54 @@
+@page "/"
+@layout HomeMasterPage
+@inject ProductStateService _productStateService
+@inject HttpClient Http
+@implements IDisposable
+
+<div class="container-fluid">
+
+    <h3>Cybersoft marketplace</h3>
+    <div class="row">
+        @foreach (var product in _productStateService.Products)
+        {            
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="@product.Image" class="card-img-top" alt="Product image">
+                    <div class="card-body">
+                        <h3 class="card-title">@product.Name</h3>
+                            <p class="card-text">Price: $@product.Price.ToString("F2")</p>
+                                <p class="text-primary fst-italic">@product.productCategoryDto.Name</p>
+                                    <div class="d-flex justify-content-between">
+                                        <p class="text-success fw-bold">@product.productShopDto.Name</p>
+                                        <p class="card-text">@product.productShopDto.Description</p>
+                                    </div>
+                        <button class="btn btn-primary">Add to Cart</button>
+
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+
+
+</div>
+
+
+@code {
+    private readonly List<ProductDto> products = new List<ProductDto>();
+    protected override async Task OnInitializedAsync()
+    {
+        // Gọi API ở đây nếu cần
+        // var data = await Http.GetFromJsonAsync<T>("/api/endpoint");
+        await _productStateService.LoadProductsAsync(); // Giả sử bạn có phương thức này để load dữ liệu
+
+        // Nếu có dùng state service:
+        _productStateService.OnChange += _productStateService.StateHasChanged;
+    }
+
+    public void Dispose()
+    {
+        // Cleanup nếu cần
+        _productStateService.OnChange -= StateHasChanged;
+    }
+}

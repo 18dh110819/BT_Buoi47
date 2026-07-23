@@ -1,0 +1,25 @@
+@using Cybersoft_store.Web.Shared
+
+<CascadingAuthenticationState>
+    <Router AppAssembly="@typeof(Program).Assembly">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="@routeData" DefaultLayout="typeof(HomeMasterPage)">
+                <NotAuthorized>
+                    <p>Bạn không có quyền truy cập trang này.</p>
+                    <NavLink href="/login">Đăng nhập</NavLink>
+                </NotAuthorized>
+                <Authorizing>
+                    <p>Checking authorization...</p>
+                </Authorizing>
+            </AuthorizeRouteView>
+            <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+        </Found>
+        @* /hello -: sẽ hiển thị nội dung của NotFound *@
+        <NotFound>
+            <PageTitle>Not found</PageTitle>
+            <LayoutView Layout="typeof(HomeMasterPage)">
+                <p role="alert">Không tồn tại trang </p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+</CascadingAuthenticationState>
